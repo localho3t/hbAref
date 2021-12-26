@@ -49,7 +49,14 @@
                 </div>
             </div>
         </div>
+        <div class="row m-5">
+            <center>
+                <span id="progressbar-cc">0</span>
+                <span>سالگیتون مبارک.</span>
+            </center>
+        </div>
         <div class="row">
+
             <div class="col-12">
                 <progress value="0" max="999" id="progressBar"></progress>
             </div>
@@ -63,13 +70,9 @@
                 </center>
             </div>
         </div>
-    </div>
-    <div class="row col-12">
-        <center>
-            <img class="img" hidden id="immg" src="1.jpeg" alt="">
-        </center>
 
     </div>
+
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -88,14 +91,89 @@
                         <h3>
                             سلام آقا عارف عزیز !
                         </h3>
+
                         <p>
-                            متن.....
+                            اول همین نامه بگم که واقعا بلد نیستم لفظ قلم حرف بزنم پس به بزرگواری خودتون ببخشید.
                         </p>
+                        <p>
+                            این نامه نه فقط از طرف من بلکه از طرف تمام خانواده نسبتا (با چشم پوشی از استاندارد ها) بزرگ لایف اند می هستش و امیدوارم توی این نامه حرف دل همه رو زده باشم.
+                        </p>
+                        <p>
+                            امیدوارم که امسال هم مثل بقیه سال های زندگیتون امید کلی از جوان های با استعداد باشین (با فاکتور گیری از خودم) و بتونین توی مسیر پیشرفت جوان های این کشور پر رنگ واقع بشین.
+                        </p>
+
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="fr.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <p>
+                                            هیچ کس نمیتونه صمیمیت بین بچه ها و گره خوردن کار اونا با زندگیشون ، همبستگی هاشون ، پر انرژی بودناشون ، دنبال نو آوری بودن هاشون رو نادیده بگیره.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            چرا ؟؟
+
+                        </p>
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="ni.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <p>
+                                            به قول ما مازندرانی ها "یا باس خله خار باوی تره دست بالا بورن یا باس خله بد باوی تره لینگ زیر چال هکنن" .
+                                        </p>
+                                        <p>
+                                            مسلما تنها دلیل دلایل بالا شما هستین و گرنه هیچ تیمی به خودی خود نمیتونه به این قشنگی روی پاهای خودش وایسته.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <p>
+                            امیدوارم سال پیش رو با چالش های کمر شکنی دست و پنجه نرم کنین و با موفقیت از اون بیرون بیاین.
+                        </p>
+
+                        <p>
+                            امیدوارم امسال همونطور که شروع تازه ای برای تیم تک بود برای شما هم شروع تازه ایده ها و چالش ها باشه.
+                        </p>
+
+                        <p>
+                            امیدوارم امسال همونطور که رکورد فروش و چهار رقمی شدن مشتریان رو زدینم (از دید خانواده گفتم :\ وگرنه مخلص تیم crm و فروش هستیم) رکورد های بیشتری در گینس های لایف اند می ثبت کنیم.(مثل رکورد پر رنگ تر دیده شدن تیم تک D: )
+                        </p>
+
+
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="end.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <p>
+                                            و در اخر یه نصیحتی به همه مشتری ها و خانواده لایف اند می کردین و حالا نوبت ما هستش که اون نصیحت رو بهتون بکنیم -به خودت سلام کن-.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
                 </div>
             </div>
         </div>
@@ -136,10 +214,20 @@
                     document.getElementById('progressBar').hidden = true;
                     document.getElementById('immg').hidden = false;
                 }
+
                 document.getElementById("progressBar").value = 1000 - timeleft;
                 timeleft -= 1;
 
-            }, 1);
+            }, 33);
+            var time = 32;
+            var text = setInterval(function() {
+                if (time <= 0) {
+                    clearInterval(text);
+
+                }
+                document.getElementById('progressbar-cc').innerHTML = 32 - time;
+                time -= 1;
+            }, 1000);
         </script>
     </div>
 </body>
